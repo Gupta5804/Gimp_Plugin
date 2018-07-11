@@ -14,8 +14,13 @@ def rawble_products(image, drawable,option_application="",option_form="",file_va
     offy=0
     #pdb.gimp_image_resize(image, new_width, new_height, offx, offy)
     pdb.gimp_image_scale(image, new_width, new_height)
+    
+    
+    
+    
+  # Application Options  
+    
     if(option_application == 0 ):
-        #img_application ="C:\Users\RARARA\.gimp-2.8\plug-ins\\applications\Eye-Contour.jpg"
         img_application = os.path.expanduser("~\.gimp-2.8\plug-ins\\applications\Eye-Contour.jpg")
     elif(option_application == 1):
         img_application = os.path.expanduser("~\.gimp-2.8\plug-ins\\applications\Hair-Care.jpg")
@@ -59,20 +64,19 @@ def rawble_products(image, drawable,option_application="",option_form="",file_va
         img_application = os.path.expanduser("~\.gimp-2.8\plug-ins\\applications\Snacks-Food")
     elif(option_application == 21):
         img_application = os.path.expanduser("~\.gimp-2.8\plug-ins\\applications\Seasonings.jpg")
+    
+ # Form Options
+    
     if(option_form == 0):
-        #img_form_addr = "C:\Users\RARARA\.gimp-2.8\plug-ins\\form\liquid.jpg"
         img_form_addr = os.path.expanduser("~\.gimp-2.8\plug-ins\\form\liquid.jpg")
     elif(option_form == 1):
         img_form_addr = os.path.expanduser("~\.gimp-2.8\plug-ins\\form\powder.jpg")
     elif(option_form == 2):
         img_form_addr = os.path.expanduser("~\.gimp-2.8\plug-ins\\form\oil.jpg")
 
-    elif(option_form == 1):
-        pdb.gimp_message(option_form)
-    elif(option_form == 2):
-        pdb.gimp_message(option_form)
-    elif(option_form == 3):
-        pdb.gimp_message(option_form)
+    
+    
+    
     # function code goes here...
     #layer_one = gimp.Layer(image, "application", image.width, image.height, RGB_IMAGE,100, NORMAL_MODE)
     #image.add_layer(layer_one,0)
@@ -133,9 +137,12 @@ register(
         # basic parameters are: (UI_ELEMENT, "variable", "label", Default)
         (PF_IMAGE, "image", "takes current image", None),
         (PF_DRAWABLE, "drawable", "Input layer", None),
+        
+        ## Add New Application Name at the end of the list
         (PF_OPTION, "option_application", "Select Application", 0,
             ("Eye Contour", "Hair care", "Men Care", "Perfumes & Fragrances", "Skin Care","Sun Care","Toiletries","Baby Food/Infant Food","Bakery","Beverages","Cereals/Breakfast Foods","Confectionery","Dairy Products","Desserts and Ice Cream","Fats, Oils & Sweet Spreads","Fruits & Vegetables","Functional Food and Nutrition","Grain Mill Products","Meals, Convenience Foods, Ready Meals","Meat, Poultry, Fish & Egg Products","Sauces, Seasonings, Condiments & Soups","Snack Foods")
          ),
+        ## Add New Form Name at the end of the list
          (PF_OPTION, "option_form", "Select Form", 0,
             ("Liquid","Powder","Oil")
          ),
