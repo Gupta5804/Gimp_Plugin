@@ -27,3 +27,19 @@ Usage
 4. Select the application,form and image of product and click ok.
 5. Export the image created.
 
+To Add a new Application
+--------------------------
+1. Open C:\Users\ `Your User` \ rawble_products.py   in a editor.
+2. Add the product Name at the end of the list at line 143 .(may change)
+3. Add the address of the product by copying the last elif code and change the option number.
+4. Add the image file of size approx 330x397 in .gimp-2.8\application folder
+
+
+To Add a new Form
+--------------------------
+1. Open C:\Users\ `Your User` \ rawble_products.py   in a editor.
+2. Add the product Name at the end of the list at line 147 .(may change)
+3. Add the address of the Form by copying the last elif code and change the option number.
+4. Add the image file of size approx 330x397 in .gimp-2.8\form folder.
+
+
